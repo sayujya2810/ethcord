@@ -9,7 +9,7 @@ const query = `*[_type == "conversations" && isDm==false]{
 export default async (req, res) => {
   try {
     const sanityResponse = await client.fetch(query)
-
+    alert(sanityResponse)
     res.status(200).send(sanityResponse)
   } catch (error) {
     console.error(error)
